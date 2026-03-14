@@ -150,7 +150,7 @@ function App() {
              <div className="profile-image-wrapper">
                <img src="/imagenes/perfil.jpeg" alt={perfil.nombre} className="profile-photo" />
              </div>
-             <a href="/CV_JonierUrreaPinchao.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-cv">
+             <a href="/HojadeVida_JonierUrreaPinchao.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-cv">
                Descargar Hoja de Vida
              </a>
           </div>
