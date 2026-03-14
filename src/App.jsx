@@ -74,6 +74,14 @@ function App() {
       linkDemo: 'https://descargapp.vercel.app/',
       linkRepo: 'https://github.com/jonier255/A-C-Soluciones-Moviles-Flutter.git',
       imagen: '/imagenes/moviles.jpeg'
+    },
+
+    {
+      id: 4,
+      titulo: 'Desarrollo de una aplicación móvil Para la empresa AFH Metalmecánicos',
+      descripcion: 'Una aplicación móvil para la gestión de vehiculos y conductores, diseñada para el seguimiento de los vehiculos de la empresa afh metalmecanicos.',
+      tecnologias: ['Django', 'Python', 'React Native', 'Sqlite'],
+      imagen: '/imagenes/Afh-mobile.jpeg'
     }
   ];
 
@@ -88,6 +96,7 @@ function App() {
     { nombre: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" },
     { nombre: "Flutter", logo: "https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" },
     { nombre: "Figma", logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" }
+    
   ];
 
   const estudios = [
@@ -141,7 +150,7 @@ function App() {
              <div className="profile-image-wrapper">
                <img src="/imagenes/perfil.jpeg" alt={perfil.nombre} className="profile-photo" />
              </div>
-             <a href="/hoja-de-vida.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-cv">
+             <a href="/CV_JonierUrreaPinchao.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-cv">
                Descargar Hoja de Vida
              </a>
           </div>
@@ -157,12 +166,16 @@ function App() {
               <div className="project-image-container">
                 <img src={proyecto.imagen} alt={proyecto.titulo} className="project-image" />
                 <div className="project-overlay">
-                  <a href={proyecto.linkDemo} target="_blank" rel="noopener noreferrer" className="btn-icon" title="Ver Demo">
-                    <ExternalLinkIcon />
-                  </a>
-                  <a href={proyecto.linkRepo} target="_blank" rel="noopener noreferrer" className="btn-icon" title="Ver Código">
-                    <GithubIcon />
-                  </a>
+                  {proyecto.linkDemo && (
+                    <a href={proyecto.linkDemo} target="_blank" rel="noopener noreferrer" className="btn-icon" title="Ver Demo">
+                      <ExternalLinkIcon />
+                    </a>
+                  )}
+                  {proyecto.linkRepo && (
+                    <a href={proyecto.linkRepo} target="_blank" rel="noopener noreferrer" className="btn-icon" title="Ver Código">
+                      <GithubIcon />
+                    </a>
+                  )}
                 </div>
               </div>
               <div className="project-info">
@@ -248,7 +261,7 @@ function App() {
               </div>
               <div className="contact-card-info">
                 <span className="contact-card-label">LinkedIn</span>
-                <span className="contact-card-value">Jonier Urrea Pinchao</span>
+                <span className="contact-card-value">https://www.linkedin.com/in/jonier-pinchao-496a1335a</span>
               </div>
             </a>
             <a href={perfil.social.whatsapp} target="_blank" rel="noopener noreferrer" className="contact-card">
